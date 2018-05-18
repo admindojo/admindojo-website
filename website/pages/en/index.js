@@ -80,9 +80,9 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href="">coming soon</Button>
+           {/* <Button href="">coming soon</Button>*/}
 
-            {/*<Button href={`${siteConfig.baseUrl}docs/getting-started.html`} >Start training</Button>*/}
+            <Button href={`${siteConfig.baseUrl}docs/getting-started.html`} >Start training</Button>
           </PromoSection>
         </div>
       </SplashContainer>

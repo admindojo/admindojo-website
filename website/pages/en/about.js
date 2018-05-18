@@ -26,14 +26,12 @@ class about extends React.Component {
     let language = this.props.language || '';
     const supportLinks = [
       {
-        content: '',
-        image: imgUrl('user_profil_marvin.jpg'),
-        imageAlign: 'top',
-        title: 'Marvin Heimbrodt',
-      },
-      {
-        content: 'Please feel free to contribute! <br />Checkout the insctructions at github.',
-        title: 'Contribute',
+        content: 'admindojo a prove of concept of an game style, interactive linux tutorial for sysadmins. <br />' +
+        'It\'s in a very early stage but the listed lessons are fully functional - give it a try!   <br ><br >' +
+        'Feedback is is highly appreciated! <a href="https://github.com/admindojo/admindojo/issues/new"> Please create an issue at github</a><br ><br > ' +
+        'admindojo is a personal project <a href="https://github.com/6uhrmittag">by marvin heimbrodt</a>' +
+        '',
+        title: 'About',
       },
       {
         content: ' ',
@@ -48,7 +46,6 @@ class about extends React.Component {
             <header className="postHeader">
               <h2></h2>
             </header>
-            <p>This project is maintained by .</p>
             <GridBlock contents={supportLinks} layout="threeColumn" />
           </div>
         </Container>

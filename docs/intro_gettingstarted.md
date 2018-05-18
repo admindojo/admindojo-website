@@ -3,48 +3,50 @@ id: getting-started
 title: Getting started
 ---
 
-Start a training is easy and it's possible on your own VM or hassle-free directly on our servers.
+Here is how you start your training:
 
-# I want to train on my own machine
+## What you'll need
 - Internet
-- Ubuntu Server VM
+- a fresh Ubuntu Server VM (e.g. VirtualBox) with a `sudo user`
 
 or
-- Ubuntu Server e.g. a free Amazon AWS micro instanz
-# I don't want setup anything
-## Requirements
-- Internet
-- terminal (mac/linux) or 
+- a fresh Ubuntu Server with a `sudo user` (e.g. a free Amazon AWS micro instance)
+- a Terminal (SSH)
 
-or
-- SSH-Client (windows)
+Please note that you'll install software and modify the system during the training. 
+It is recommended to use a fresh install for every lesson (use snapshots on local VMs).
  
-## Connect
-### nativ mac/linux terminal
+### Login to the system
+Connect to your Ubuntu via SSH or via console (in case of a VM)
+
+## Install admindojo
+Simpy download the latest version and install the required software by typing the following into the terminal:
 ```sh
-ssh -p 1332 admin@admingame.de
+#Download 
+wget https://github.com/admindojo/admindojo/archive/master.tar.gz
+tar -xzf master.tar.gz
+rm master.tar.gz
+mv admindojo-master admindojo
+
+#Install required software and add directory to $PATH
+bash ./setup.sh
+
 ```
-### nativ mac/linux terminal
-putty: xyls
-
-
-
-# Start your training
+## Start your training
+Simply type `admindojo start` and you'll get a list of all available lessons:
 
 ```sh
-admin@admingame:~/$ admingame start
+admin@admindojo:~/$ admindojo start
 
-Available missions:
+Available lessons:
 
         1 Install and run apache webserver
-        2 Install and run apache webserver
-        3 Install and run apache webserver (cant get solved)
-        4 TEST MISSION NAME
-Please select a mission [Input number]:
+        2 TEST MISSION
+Please select a lesson [Input number]:
 1
 
 ######################################################
-      Mission: Install and run apache webserver
+      Lesson: Install and run apache webserver
 
          by: Marvin Heimbrodt url: slashlog.de
 ######################################################
@@ -59,23 +61,23 @@ Your Tasks:
         Description: Make sure the webserver is running
 
 ⏵ Apache Website is online
-        Description: You should be able to reach the apache demo website from the comadline
+        Description: You should be able to reach the apache demo website from the comandline
 
 ⏵ Apache Website is public
         Description: Your demo Website should be publicly visible with a webbrowser.
 
-Note: Install and run apache webserver
 
 
 ```
 
-### End your training
+### End your training and check result
+Type `admondojo end` to get your work checked:
 ```sh
-admin@admingame:~$admingame end
+admin@admindojo:~$admindojo end
 
-Mission: Install and run apache webserver
+Lesson: Install and run apache webserver
 
-Your Result:
+Your result:
 ⏵ Install Apache Webserver         solved ✔
   Points:                                 2
 -------------------------
@@ -95,7 +97,13 @@ Your Result:
 
 You solved all tasks!
 
-Mission complete
+Lesson complete
 
-Mission marked as solved
+Lesson marked as solved
+```
+
+### Train in tutor mode
+In tutor mode a tutor checks your work in the background while you're working. Once a task is completed
+```bash
+admindojo tutor
 ```
