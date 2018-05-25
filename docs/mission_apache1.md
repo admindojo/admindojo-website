@@ -18,7 +18,7 @@ If you're using a local VM, select:
 If you're using a public server, select:
 
     Install and run apache webserver (cloud version)
-# Your tasks
+## Your tasks
 
 ☐ Install the apache2 webserver
 

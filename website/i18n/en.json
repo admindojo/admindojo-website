@@ -6,10 +6,11 @@
     "tagline": "hands-on sysadmin training",
     "getting-started": "Getting started",
     "mission_other1": "Another mission",
-    "mission_apache1": "Install a Apache Webserver",
+    "mission_apache1": "Install an Apache Webserver",
     "Start training": "Start training",
     "About": "About",
-    "Intro": "Intro"
+    "Intro": "Intro",
+    "Lessons": "Lessons"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
