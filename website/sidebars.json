@@ -2,6 +2,9 @@
   "admindojo": {
       "Intro": [
         "getting-started"
+      ],
+      "Lessons": [
+        "mission_apache1"
       ]
     }
 }

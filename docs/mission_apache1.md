@@ -1,24 +1,31 @@
 ---
 id: mission_apache1
-title: Install a Apache Webserver
+title: Install an Apache Webserver
 ---
 
-In this mission you'll learn how to install a basic Apache Webserver with a static html website.
+In this lesson you'll learn how to install a basic Apache webserver with a static html website.
 
-## Connect
+## Start
 
 ```sh
-ssh -p 1332 admin@admingame.de
+admindojo start
 ```
 
+If you're using a local VM, select:
+
+    "Install and run an apache webserver (offline version)"
+
+If you're using a public server, select:
+
+    Install and run apache webserver (cloud version)
 # Your tasks
 
-☐ Install the apache2 webserver for ubuntu
+☐ Install the apache2 webserver
 
 ☐ Make sure the webserver is running
 
-☐ You should be able to reach the apache demo website from the comadline
+☐ View the local demo website from your terminal
 
-☐ Your demo Website should be publicly visible with a webbrowser.
+☐ View the demo website in a browser
 
 
