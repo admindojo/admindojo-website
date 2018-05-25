@@ -1,6 +1,6 @@
 ---
 id: mission_apache1
-title: Install an Apache Webserver
+title: Install an Apache webserver
 ---
 
 In this lesson you'll learn how to install a basic Apache webserver with a static html website.
