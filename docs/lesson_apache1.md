@@ -1,9 +1,9 @@
 ---
 id: lesson_apache1
-title: Install an Apache webserver
+title: Install an Apache web server
 ---
 
-In this lesson you'll learn how to install a basic Apache webserver with a static html website.
+In this lesson you'll learn how to install a basic Apache web server with a static html website.
 
 ## Start
 
@@ -13,16 +13,16 @@ admindojo start
 
 If you're using a local VM, select:
 
-    "Install and run an apache webserver (offline version)"
+    "Install and run an apache web server (offline version)"
 
 If you're using a public server, select:
 
-    Install and run apache webserver (cloud version)
+    Install and run apache web server (cloud version)
 ## Your tasks
 
-☐ Install the apache2 webserver
+☐ Install the apache2 webs erver
 
-☐ Make sure the webserver is running
+☐ Make sure the web server is running
 
 ☐ View the local demo website from your terminal
 
