@@ -136,7 +136,7 @@ const Missions = props => (
   <Block layout="fourColumn" background="light">
     {[
       {
-        content: 'Install a Apache Webserver <br />Secure a Apache Webserver',
+        content: '<a href="' + siteConfig.baseUrl + 'docs/lesson_apache1.html' + '">Install an Apache Webserver</a> <br />Secure a Apache Webserver',
         image: imgUrl('frontpage/browser.png'),
         imageAlign: 'top',
         title: 'Apache trainings',
