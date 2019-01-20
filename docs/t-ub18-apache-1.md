@@ -6,9 +6,9 @@ title: Serve a static Website with Apache
 In this training you'll learn how to install a basic Apache web server and serve a static html website.
 
 ## Objective
-- setup a apache web server
-- serve a website that contains `Hello World!` (plaintext, no need for HTML)
-- make your website accessible via SSL (a simple selfsigned snakeoil cert is ok)
+- setup a apache web server with default configuration
+- serve a website that contains `Hello World!`as landing-page (plaintext, no need for HTML).
+- make your website accessible via SSL (a simple selfsigned-snakeoil cert is ok)
 
 ## Detailed explanation (spoilers)
 ### About Apache

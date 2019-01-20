@@ -29,13 +29,13 @@ Admindojo is not just a simulation! Admindojo uses an unmodified Linux image and
 2. Change to a training directory
     - e.g. `cd ub18-apache-1`
 3. type `vagrant up`
-    - Vagrant will now build the VM. The first run can take a while. 
+    - Vagrant will now build the VM. The first run can take a while 
 4. type `vagrant ssh`
     - You're now inside the VM and can start the training
     
 ### User and password
-- username: vagrant
-- password: vagrant
+- username: `vagrant`
+- password: `vagrant`
 ### System details
 The used Linux distribution can differ by training:
 - Ubuntu 18 (bionic)
@@ -45,13 +45,15 @@ The used Linux distribution can differ by training:
     - inside VM: `shutdown now`
     - outside VM, inside training directory: `vagrant halt`
 - reset
-    - to completely rebuild the VM and reset the state: `vagrant de` 
-    
+    - to completely rebuild the VM and reset the state: `vagrant destroy; vagrant up` 
+### remove VM
+- outside VM, inside training directory: `vagrant destroy`
+
 # advanced users
 - Vagrant 
-    - [official documentation](https://www.vagrantup.com/docs/cli/)
+    - [Official documentation](https://www.vagrantup.com/docs/cli/)
     - [Cheat Sheet by wpscholar](https://gist.github.com/wpscholar/a49594e2e2b918f4d0c4)
 - VirtualBox
-    - [official documentation](https://www.virtualbox.org/wiki/End-user_documentation)
+    - [Official documentation](https://www.virtualbox.org/wiki/End-user_documentation)
 - InSpec 
-    - [official documentation](https://www.inspec.io/docs/reference/cli/)
+    - [Official documentation](https://www.inspec.io/docs/reference/cli/)
