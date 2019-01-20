@@ -32,21 +32,24 @@ Admindojo is not just a simulation! Admindojo uses an unmodified Linux image and
     - Vagrant will now build the VM. The first run can take a while 
 4. Type `vagrant ssh`
     - You're now inside the VM and can start the training
-5. To verfiy your solution type: `admindojo`
+5. To verfiy your solution type inside the VM: `admindojo`
 
 ### User and password
 - username: `vagrant`
 - password: `vagrant`
+
 ### System details
 The used Linux distribution can differ by training:
 - Ubuntu 18 (bionic)
     - [Official cloud-image distributed by Ubuntu](https://app.vagrantup.com/ubuntu/boxes/bionic64)
+    
 ### shutdown, reset
 - shutdown
     - inside VM: `shutdown now`
     - outside VM, inside training directory: `vagrant halt`
 - reset
     - to completely rebuild the VM and reset the state: `vagrant destroy; vagrant up` 
+    
 ### remove VM
 - outside VM, inside training directory: `vagrant destroy`
 
