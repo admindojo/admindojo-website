@@ -12,4 +12,5 @@
 <url> <loc>https://admindojo.org/docs/getting-started.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://admindojo.org/docs/getting-started.html" /> </url>
 <url> <loc>https://admindojo.org/docs/lesson_apache1.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://admindojo.org/docs/lesson_apache1.html" /> </url>
 <url> <loc>https://admindojo.org/docs/mission_other1.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://admindojo.org/docs/mission_other1.html" /> </url>
+<url> <loc>https://admindojo.org/docs/t-ub18-apache-1.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://admindojo.org/docs/t-ub18-apache-1.html" /> </url>
 </urlset>
