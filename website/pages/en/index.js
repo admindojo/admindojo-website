@@ -80,8 +80,6 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-           {/* <Button href="">coming soon</Button>*/}
-
             <Button href={`${siteConfig.baseUrl}docs/getting-started.html`} >Start training</Button>
           </PromoSection>
         </div>
@@ -107,9 +105,16 @@ const Screenshot = props => (
     className="productShowcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
     {/*<h2>Feature Callout</h2>*/}
-    <br />
-      <br />
-      <a href="https://asciinema.org/a/180465" target="_blank"><img src="https://asciinema.org/a/180465.png" width="600px" /></a>
+    {/*  <a href="https://asciinema.org/a/180465" target="_blank"><img src="https://asciinema.org/a/180465.png" width="600px" /></a>*/}
+  </div>
+);
+
+const ProjectDescription = props => (
+  <div
+          className="productShowcaseSection paddingBottom"
+
+      style={{textAlign: 'center'}}>
+      Train <b>real-world scenarios in real environments</b> using industry standard tools.
   </div>
 );
 
@@ -136,46 +141,46 @@ const Missions = props => (
   <Block layout="fourColumn" background="light">
     {[
       {
-        content: '<a href="' + siteConfig.baseUrl + 'docs/lesson_apache1.html' + '">Install an Apache web server</a> <br />Secure a Apache web server',
+        content: '<a href="' + siteConfig.baseUrl + 'docs/t-ub18-apache-1.html' + '">Serve a static website with Apache</a> <br />Apache hardening',
         image: imgUrl('frontpage/browser.png'),
         imageAlign: 'top',
-        title: 'Apache trainings',
+        title: 'Apache training',
       },
       {
         content: 'Everyday admin tasks <br />Common used commands',
         image: imgUrl('frontpage/terminal.png'),
         imageAlign: 'top',
-        title: 'Sysadmin trainings',
+        title: 'Sysadmin training',
       },
     ]}
   </Block>
 );
 
-// const TryOut = props => (
-//   <Block id="try">
-//     {[
-//       {
-//         content: 'Talk about trying this out',
-//         image: imgUrl('docusaurus.svg'),
-//         imageAlign: 'left',
-//         title: 'Try it Out',
-//       },
-//     ]}
-//   </Block>
-// );
+ const TryOut = props => (
+   <Block id="try">
+     {[
+       {
+         content: 'Talk about trying this out',
+         image: imgUrl('docusaurus.svg'),
+         imageAlign: 'left',
+         title: 'Try it Out',
+       },
+     ]}
+   </Block>
+ );
 
-// const Description = props => (
-//   <Block background="dark">
-//     {[
-//       {
-//         content: 'This is another description of how this project is useful',
-//         image: imgUrl('docusaurus.svg'),
-//         imageAlign: 'right',
-//         title: 'Description',
-//       },
-//     ]}
-//   </Block>
-// );
+ const Description = props => (
+   <Block background="dark">
+     {[
+       {
+         content: 'This is another description of how this project is useful',
+         image: imgUrl('docusaurus.svg'),
+         imageAlign: 'right',
+         title: 'Description',
+       },
+     ]}
+   </Block>
+ );
 
 const Showcase = props => {
   if ((siteConfig.users || []).length === 0) {
@@ -215,14 +220,8 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-          <Screenshot />
+          <ProjectDescription />
           <Missions />
-          {/*<Features />*/}
-
-
-          {/*<LearnHow />*/}
-          {/*<Description />*/}
-          {/*<Showcase language={language} />*/}
         </div>
       </div>
     );

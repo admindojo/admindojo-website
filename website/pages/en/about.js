@@ -26,9 +26,9 @@ class about extends React.Component {
     let language = this.props.language || '';
     const supportLinks = [
       {
-        content: 'admindojo a prove of concept of an game style, interactive linux tutorial for sysadmins. <br />' +
+        content: 'admindojo a prove of concept of a game style, interactive Linux tutorial for sysadmins.  <br />' +
         'It\'s in a very early stage but the listed lessons are fully functional - give it a try!   <br ><br >' +
-        'Feedback is is highly appreciated! <a href="https://github.com/admindojo/admindojo/issues/new"> Please create an issue at github</a><br ><br > ' +
+        'Feedback is highly appreciated! <a href="https://github.com/admindojo/admindojo/issues/new"> Please create an issue at GitHub</a><br ><br > ' +
         'admindojo is a personal project <a href="https://github.com/6uhrmittag">by marvin heimbrodt</a>' +
         '',
         title: 'About',

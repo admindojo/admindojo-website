@@ -4,13 +4,28 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "hands-on sysadmin training",
-    "getting-started": "Getting started",
-    "lesson_apache1": "Install an Apache webserver",
-    "mission_other1": "Another mission",
-    "Start training": "Start training",
-    "About": "About",
-    "Intro": "Intro",
-    "Lessons": "Lessons"
+    "docs": {
+      "getting-started": {
+        "title": "Getting started"
+      },
+      "lesson_apache1": {
+        "title": "Install an Apache web server"
+      },
+      "mission_other1": {
+        "title": "Another mission"
+      },
+      "t-ub18-apache-1": {
+        "title": "Serve a static Website with Apache"
+      }
+    },
+    "links": {
+      "Start training": "Start training",
+      "About": "About"
+    },
+    "categories": {
+      "Intro": "Intro",
+      "Training Apache": "Training Apache"
+    }
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

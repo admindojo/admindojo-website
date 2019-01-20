@@ -15,7 +15,7 @@ const users = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: '/img/user_profil_marvin.jpg',
-    infoLink: 'https://www.slaslog.de',
+    infoLink: 'https://www.slaslog.org',
     pinned: true,
   },
 ];
@@ -47,7 +47,7 @@ const siteConfig = {
   ],
 
   // If you have users set above, you add it here:
-  /*users,*/
+  /*users, */
 
   /* path to images for header/footer
   headerIcon: 'img/docusaurus.svg',
