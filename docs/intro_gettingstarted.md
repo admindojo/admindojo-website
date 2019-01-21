@@ -50,7 +50,7 @@ The used Linux distribution can differ by training:
 - reset
     - to completely rebuild the VM and reset the state: `vagrant destroy; vagrant up` 
     
-### remove VM
+### finish training, remove VM
 - outside VM, inside training directory: `vagrant destroy`
 
 # advanced users
