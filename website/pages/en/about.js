@@ -14,7 +14,7 @@ const GridBlock = CompLibrary.GridBlock;
 const siteConfig = require(process.cwd() + '/siteConfig.js');
 
 function docUrl(doc, language) {
-  return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
+  return siteConfig.baseUrl + this.props.config.docsUrl + (language ? language + '/' : '') + doc;
 }
 
 function imgUrl(img) {
@@ -26,30 +26,45 @@ class about extends React.Component {
     let language = this.props.language || '';
     const supportLinks = [
       {
-        content: 'admindojo a prove of concept of a game style, interactive Linux tutorial for junior sysadmins.  <br />' +
-        'It\'s in a very early stage but the listed lessons are fully functional - give it a try!   <br ><br >' +
-        'Feedback is highly appreciated! <a href="https://github.com/admindojo/admindojo-training/issues/new"> Please create an issue at GitHub</a><br ><br > ' +
-        'admindojo is a personal project <a href="https://github.com/6uhrmittag">by marvin heimbrodt</a>' +
-        '',
-        title: 'About',
+        content: 'admindojo is a prove of concept of a game style, interactive Linux tutorial for junior sysadmins.  <br />' +
+                  'It utilizes third-party tools to provide a free, real-world training enviroment for everyboy.<br >' +
+        '<br >' +
+        '<br >' +
+        'The teaching enviroment consists of the following tools:' +
+        '<br >' +
+        '<ul>' +
+          '<li><a href="https://www.inspec.io/">InSpec by Chef</a> - Compliance testing framework - License: Apache License 2.0</li>' +
+          '<li><a href="https://www.vagrantup.com/">Vagrant by HashiCorp</a> (Easy-to-use workflow to build VM environments- License: MIT</li>' +
+          '<li><a href="https://www.virtualbox.org/">Virtualbox by Oracle</a> - Powerful virtualization for enterprise as well as home use - License: GPLv2</li>' +
+        '</ul>' +
+
+        '<i>admindojo does not own, sell and distribute these tools and is not associated or connected with any of these tools\/companies.</i><br >' +
+
+        '<br ><br > ' +
+
+        'admindojo is a hobby project <a href="https://github.com/6uhrmittag">by marvin heimbrodt</a>.' +
+        '<br >' +
+
+        'Feeback is highly appreciated! <a href="https://github.com/admindojo/admindojo/issues/new" target="_blank">Create an GitHub issue</a> or send a mail: feedback@admindojo.org' +
+        '<br >' +
+        'Create an GitHub Issue or send a mail: issue@admindojo.org' +
+        '<br >' +
+        '<br ><br ><br >',
+        title: 'about admindojo',
       },
-      {
-        content: ' ',
-        title: ' ',
-      },
+
     ];
 
     return (
       <div className="docMainWrapper wrapper">
         <Container className="mainContainer documentContainer postContainer">
-          <div className="post">
-            <header className="postHeader">
-              <h2></h2>
-            </header>
-            <GridBlock contents={supportLinks} layout="threeColumn" />
-          </div>
+        <GridBlock contents={supportLinks} layout="threeColumn" />
+
         </Container>
       </div>
+
+
+
     );
   }
 }

@@ -35,7 +35,7 @@ admindojo utilizes the third-party tools Virtualbox and Vagrant:
     - You're now inside the VM and can start the training
 5. To verfiy your solution type inside the VM: `admindojo`
 
-### User and password
+### SSH user and password
 - username: `vagrant`
 - password: `vagrant`
 

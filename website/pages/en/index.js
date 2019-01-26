@@ -19,7 +19,7 @@ function imgUrl(img) {
 }
 
 function docUrl(doc, language) {
-  return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
+  return siteConfig.baseUrl + this.props.config.docsUrl + (language ? language + '/' : '') + doc;
 }
 
 function pageUrl(page, language) {
@@ -80,7 +80,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={`${siteConfig.baseUrl}docs/getting-started.html`} >Start training</Button>
+            <Button href={`${siteConfig.baseUrl}getting-started`} >Start training</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -117,6 +117,7 @@ const ProjectDescription = props => (
       style={{textAlign: 'center'}}>
       Train <b>real-world scenarios in real environments</b> using industry standard tools.
   </div>
+
 );
 
 const Features = props => (
@@ -142,7 +143,7 @@ const Missions = props => (
   <Block layout="fourColumn" background="light">
     {[
       {
-        content: '<a href="' + siteConfig.baseUrl + 'docs/t-ub18-apache-1.html' + '">Serve a static website with Apache</a> <br />Apache hardening',
+        content: '<a href="' + siteConfig.baseUrl + 'webserver-apache-ub18-basic-1' + '">Serve a static website with Apache</a> <br />Apache hardening',
         image: imgUrl('frontpage/browser.png'),
         imageAlign: 'top',
         title: 'Apache training',
