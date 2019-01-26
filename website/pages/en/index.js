@@ -220,7 +220,7 @@ class Index extends React.Component {
     return (
       <div>
         <HomeSplash language={language} />
-        <div className="mainContainer">
+        <div className="">
           <Screenshot />
           <ProjectDescription />
           <Missions />
