@@ -18,6 +18,7 @@ Admindojo is not just a simulation! Admindojo uses an unmodified Linux image and
 - Due to the usage of VirtualBox, you can't run Docker or Hyper-V in parallel with VirtualBox. See [Vagrants documentation](https://www.vagrantup.com/docs/installation/)
 
 ### Install Requirements
+admindojo utilizes the third-party tools Virtualbox and Vagrant: 
 
 1. [install VirtualBox](https://www.virtualbox.org/)
 2. [install Vagrant](https://www.vagrantup.com/downloads.html)
