@@ -104,7 +104,7 @@ const Screenshot = props => (
   <div
     className="productShowcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
-    <video controls autoPlay muted loop >
+    <video controls muted >
          <source src="img/admindojo-intro.mp4" type="video/mp4" />
     </video>
   </div>
