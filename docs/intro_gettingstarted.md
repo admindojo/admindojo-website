@@ -21,13 +21,13 @@ Admindojo is not just a simulation! Admindojo uses an unmodified Linux image and
 
 1. [install VirtualBox](https://www.virtualbox.org/)
 2. [install Vagrant](https://www.vagrantup.com/downloads.html)
-3. [download admindojo-trainings](https://github.com/admindojo/admindojo-trainings/archive/master.zip)
+3. [download admindojo-training](https://github.com/admindojo/admindojo-training/archive/master.zip) (or use `git clone`)
 
 ## Usage
 
 1. Open a Terminal(Linux + Mac) or Powershell(Windows) and change in the downloaded admindojo directory
 2. Change to a training directory
-    - e.g. `cd ub18-apache-1`
+    - e.g. `cd webserver-apache-ub18-basic-1`
 3. Type `vagrant up`
     - Vagrant will now build the VM. The first run can take a while 
 4. Type `vagrant ssh`
@@ -53,7 +53,12 @@ The used Linux distribution can differ by training:
 ### finish training, remove VM
 - outside VM, inside training directory: `vagrant destroy`
 
-# advanced users
+# for advanced users
+
+In case you are familiar with vagrant and ssh you can SSH directly to your admindojo box.
+
+Since admindojo uses real-world tools under the hood you're able to use their native functions.
+
 - Vagrant 
     - [Official documentation](https://www.vagrantup.com/docs/cli/)
     - [Cheat Sheet by wpscholar](https://gist.github.com/wpscholar/a49594e2e2b918f4d0c4)

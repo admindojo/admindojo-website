@@ -14,7 +14,7 @@
       "mission_other1": {
         "title": "Another mission"
       },
-      "t-ub18-apache-1": {
+      "webserver-apache-ub18-basic-1": {
         "title": "Serve a static Website with Apache"
       }
     },
