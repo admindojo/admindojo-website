@@ -104,8 +104,9 @@ const Screenshot = props => (
   <div
     className="productShowcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
-    {/*<h2>Feature Callout</h2>*/}
-    {/*  <a href="https://asciinema.org/a/180465" target="_blank"><img src="https://asciinema.org/a/180465.png" width="600px" /></a>*/}
+    <video controls autoPlay muted loop >
+         <source src="img/admindojo-intro.mp4" type="video/mp4" />
+    </video>
   </div>
 );
 
@@ -220,6 +221,7 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
+          <Screenshot />
           <ProjectDescription />
           <Missions />
         </div>
