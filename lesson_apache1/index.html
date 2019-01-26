@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Install an Apache web server · adminDōjō</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;In this lesson you&#x27;ll learn how to install a basic Apache web server with a static html website.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Install an Apache web server · adminDōjō"/><meta property="og:type" content="website"/><meta property="og:url" content="https://admindojo.org/index.html"/><meta property="og:description" content="&lt;p&gt;In this lesson you&#x27;ll learn how to install a basic Apache web server with a static html website.&lt;/p&gt;
+"/><meta property="og:image" content="https://admindojo.org/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://admindojo.org/img/favicon.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">adminDōjō</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/getting-started" target="_self">Start training</a></li><li class=""><a href="/about" target="_self">About</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Install an Apache web server</h1></header><article><div><span><p>In this lesson you'll learn how to install a basic Apache web server with a static html website.</p>
+<h2><a class="anchor" aria-hidden="true" id="start"></a><a href="#start" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Start</h2>
+<pre><code class="hljs css language-sh">admindojo start
+</code></pre>
+<p>If you're using a local VM, select:</p>
+<pre><code class="hljs">&quot;Install and run an apache web server (offline version)&quot;
+</code></pre>
+<p>If you're using a public server, select:</p>
+<pre><code class="hljs">Install and run apache web server (cloud version)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="your-tasks"></a><a href="#your-tasks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Your tasks</h2>
+<p>☐ Install the apache2 webs erver</p>
+<p>☐ Make sure the web server is running</p>
+<p>☐ View the local demo website from your terminal</p>
+<p>☐ View the demo website in a browser</p>
+<h2><a class="anchor" aria-hidden="true" id="detailed-explanation-spoilers"></a><a href="#detailed-explanation-spoilers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Detailed explanation (spoilers)</h2>
+<h3><a class="anchor" aria-hidden="true" id="about-apache"></a><a href="#about-apache" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>About Apache</h3>
+<p><details><summary>click to show</summary></p>
+<p>
+<p>The Apache HTTP Server or short just <em>Apache</em> is one of the internets first, and most used, web server. Originally based on the <em>NCSA HTTPd</em> server,
+you'll still find it referenced as <em>httpd</em>(<strong>H</strong>yper<strong>t</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol <strong>d</strong>aemon).</p>
+<p>One reason of it's popularity is the ability to quickly add features through dynamically loadable modules. However, this also makes it a bit
+clunky compared to alternatives like nginx, which is optimized for performance.</p>
+<p>Apache is also part of the popular <em>LAMP</em> Stack - which is a bundle of <strong>L</strong>inux, <strong>A</strong>pache, <strong>M</strong>ySQL, and <strong>P</strong>HP&quot;. Generally speaking this refers to installing:</p>
+<ul>
+<li>an operating system</li>
+<li>a web server</li>
+<li>a database</li>
+<li>and an interpreter to create dynamic websites (without it, a web server usually just serves HTML content only)</li>
+</ul>
+<p>External resources</p>
+<ul>
+<li><a href="https://httpd.apache.org/">Apache's website</a></li>
+<li><a href="https://www.nginx.com/resources/wiki/">nginx's website</a></li>
+<li><a href="https://www.nginx.com/blog/nginx-vs-apache-our-view/">nginx's take on &quot;nginx vs. apache&quot;</a></li>
+<li><a href="https://maccablo.com/web-servers-a-detailed-overview-popular-webservers/">An overview of popular Webservers</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LAMP_(software_bundle)">Wikipedia: LAMP</a></li>
+</ul>
+</p>
+</details>
+<h3><a class="anchor" aria-hidden="true" id="starting-and-controlling-apache"></a><a href="#starting-and-controlling-apache" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Starting and controlling apache</h3>
+<p><details><summary>click to show</summary></p>
+<p>
+<p>There are a few ways to manage programs in Linux. To understand older tutorials and books, you should know some of them.
+The full story is quite complex and an interesting read for later. For now, just remember that
+<code>systemctrl</code> should always do the trick.</p>
+<ul>
+<li><code>sudo service programX start</code> This was the <em>old</em> command till Ubuntu 14.10. Used with SysVinit.</li>
+<li><code>sudo systemctl start programX</code> This is the modern and universal approach. Used by systemd - a system and service manager.</li>
+</ul>
+<p>There is even an extra program to control apache:</p>
+<ul>
+<li><code>sudo apache2ctrl start</code> Since Ubuntu 16.04 this is already replaced and liked to the <code>systemctl</code> command.</li>
+</ul>
+<p>Additional info:</p>
+<ul>
+<li>To check the status of a program, use <code>sudo systemctl status programX</code></li>
+<li>Not all programs are stating automatically during the system start-up. Use <code>sudo systemctl enable programX</code> to enable the autostart.</li>
+</ul>
+<p>External resources</p>
+<ul>
+<li><a href="https://askubuntu.com/a/911543">Discussion: Difference between systemctl init.d and service</a></li>
+<li><a href="https://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet">Commands SysVinit vs Systemd </a></li>
+</ul>
+</p>
+</details>
+<h3><a class="anchor" aria-hidden="true" id="accessing-websites-from-terminal"></a><a href="#accessing-websites-from-terminal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Accessing websites from terminal</h3>
+<p><details><summary>click to show</summary></p>
+<p>
+<p>Since you're in a terminal, you'll have to judge the status of websites by text-information only. There are a few tools for that e.g. :</p>
+<ul>
+<li>curl: a tool that can handle almost every internet-related protocol</li>
+<li>lynx: a text-based web-browser. It can't handle complex/modern websites or technologies. But it'll give you a visual representation of the website</li>
+</ul>
+<p>Always keep in mind what information you're interested in. E.g:</p>
+<ul>
+<li>accessing &quot;localhost&quot; will only give you a status of the local web server. Users will access your web server via it's public IP or FQDN</li>
+<li>web servers will always send response status codes(e.g. 200 or 404). These codes are only visible in the HTTP header fields. Try <code>curl -v</code></li>
+<li>ports and protocols are important. When checking websites, also check what protocol(e.g. try <code>curl -v http://wikipedia.com:443</code>)</li>
+</ul>
+<p>External resources</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">HTTP headers - by Mozilla</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP response status codes - by Mozilla</a></li>
+</ul>
+</p>
+</details></span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#start">Start</a></li><li><a href="#your-tasks">Your tasks</a></li><li><a href="#detailed-explanation-spoilers">Detailed explanation (spoilers)</a><ul class="toc-headings"><li><a href="#about-apache">About Apache</a></li><li><a href="#starting-and-controlling-apache">Starting and controlling apache</a></li><li><a href="#accessing-websites-from-terminal">Accessing websites from terminal</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section><div align="center"><h4><a href="/en/about">about admindojo</a></h4></div></section><section class="copyright">Copyright © 2019 admindojo powered by <a href="https://docusaurus.io">Docusaurus</a></section></footer></div></body></html>
