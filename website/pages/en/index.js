@@ -143,13 +143,13 @@ const Missions = props => (
   <Block layout="fourColumn" background="light">
     {[
       {
-        content: '<a href="' + siteConfig.baseUrl + 'webserver-apache-ub18-basic-1' + '">Serve a static website with Apache</a> <br />Apache hardening',
+        content: '<a href="' + siteConfig.baseUrl + 'webserver-apache-ub18-basic-1' + '">Serve a static website with Apache</a> <br />Apache hardening(coming soon)',
         image: imgUrl('frontpage/browser.png'),
         imageAlign: 'top',
         title: 'Apache training',
       },
       {
-        content: 'Everyday admin tasks <br />Common used commands',
+        content: 'Everyday admin tasks(coming soon) <br />Resize partitions(coming soon)',
         image: imgUrl('frontpage/terminal.png'),
         imageAlign: 'top',
         title: 'Sysadmin training',
