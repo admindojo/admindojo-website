@@ -5,7 +5,7 @@ title: Serve a static Website with Apache
 
 Setup a basic web server with HTTP and HTTPS serve a static HTML file.
 
-Training ID: *webserver-apache-ub18-basic-1*
+Training ID: *webserver-apache-basic-1-ub18*
 
 ## Objective
 - setup a apache web server with default configuration
