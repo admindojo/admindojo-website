@@ -1,6 +1,6 @@
 <h1 align="center">
   <p align="center">admindojo.org</p>
-  <a href="https://admindojo.org"><img src="https://admindojo.org/img/dojo_round.png" alt="admindojo"></a>
+  <a href="https://admindojo.org"><img height="300" src="https://admindojo.org/img/dojo_round.png" alt="admindojo"></a>
 </h1>
 
 <p align="center">
@@ -18,7 +18,8 @@ This is the admindojo.org source repo to build the website via github-pages.
 
 
 ## update/add training page
-Each training contains a README.md in `admindojo/admindojo-training/$Trainingname/training/$Trainingname`. This README.md should be used as training page at admindojo.org.
+Each training contains a `README.md` in `admindojo/admindojo-training/$Trainingname/training/$Trainingname`.
+This `README.md` should be used as training page at admindojo.org.
 1. copy README.md in /docs
 2. rename README.md in $Trainingname.md
 3. make sure the header is correct. If not change according to the `inspec.yaml` located in the training directory
