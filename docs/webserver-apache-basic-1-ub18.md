@@ -1,5 +1,5 @@
 ---
-id: webserver-apache-ub18-basic-1
+id: webserver-apache-basic-1-ub18
 title: Serve a static Website with Apache
 ---
 
