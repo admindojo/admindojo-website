@@ -3,8 +3,7 @@ id: webserver-apache-basic-1-ub18
 title: Serve a static Website with Apache
 ---
 
-In this training you'll learn how to install a basic Apache web server and serve a static html website.
-
+Setup a basic web server with HTTP and HTTPS serve a static HTML file.
 
 Training ID: *webserver-apache-ub18-basic-1*
 
