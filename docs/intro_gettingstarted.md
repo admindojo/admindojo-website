@@ -27,7 +27,7 @@ admindojo utilizes the third-party tools Virtualbox and Vagrant:
 ## Usage
 
 1. Clone training-repository `git clone https://github.com/admindojo/admindojo-training.git`
-        - it is also possible to just [download the trainings](https://github.com/admindojo/admindojo-training/archive/master.zip) - but git provides easier updates via `git pull` 
+    - it is also possible to just [download the trainings](https://github.com/admindojo/admindojo-training/archive/master.zip) - but git provides easier updates via `git pull` 
 2. Change into cloned repository
 3. Change to a training directory
     - e.g. `cd webserver-apache-basic-1-ub18`
