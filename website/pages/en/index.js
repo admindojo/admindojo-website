@@ -79,7 +79,7 @@ class HomeSplash extends React.Component {
         <Logo img_src={imgUrl('dojo.svg')} />
         <div className="inner">
           <ProjectTitle />
-          <PromoSection>
+           <PromoSection>
             <Button href={`${siteConfig.baseUrl}getting-started`} >Start training</Button>
           </PromoSection>
         </div>
@@ -107,7 +107,28 @@ const Screenshot = props => (
     <video controls muted >
          <source src="img/admindojo-intro.mp4" type="video/mp4" />
     </video>
+
   </div>
+);const Discord = props => (
+  <div
+    className="productShowcaseSection paddingBottom paddingTop"
+    style={{textAlign: 'center'}}>
+   <iframe src="https://discordapp.com/widget?id=543324067936206858&theme=dark" width="350" height="500"
+        allowTransparency="true" frameBorder="0"></iframe>
+
+  </div>
+);
+
+const Featurelist = props => (
+  <div
+          className="productShowcaseSection paddingBottom"
+
+      style={{textAlign: 'center'}}>
+      <p>
+      train real-world Linux administration tasks in preconfigured VirtualMachines
+      </p>
+  </div>
+
 );
 
 const ProjectDescription = props => (
@@ -222,8 +243,9 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="">
+          <Featurelist/>
+
           <Screenshot />
-          <ProjectDescription />
           <Missions />
         </div>
       </div>
