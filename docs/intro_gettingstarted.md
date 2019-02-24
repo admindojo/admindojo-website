@@ -3,12 +3,23 @@ id: getting-started
 title: Getting started
 ---
 
-## Why and how?
+## Admindojo?
 
-Admindojo uses Vagrant and Virtualbox to create a local Linux VM.
-After completing an objective it gets verified by the Testing Framework InSpec and you get instant feedback.
+admindojo provides an easy to setup enviroment to train real-world Linux administration tasks in preconfigured VirtualMachines.
 
-Admindojo is not just a simulation! Admindojo uses an unmodified Linux image and real-world objectives - everything that you learn is fully applicable to a standard Linux installation! 
+Each training contains a real-world scenario and in-depth explanations.
+After completing a scenario, it gets verified and rated by the Testing Framework InSpec - this way you know exactly if you implemented best-practices.
+
+Since Gamification can help motivating yourself, admindojo also measures the time you needed and calculates a score for each scenario. 
+
+**admindojo is not just a simulation**! admindojo uses unmodified Linux images and real-world objectives - everything that you learn is fully applicable to a standard Linux installation! 
+
+## How?
+
+1. Choose a training on the left
+2. read the objectives and implement them
+3. read the detailed explanations for in-depth information or hints
+4. run `admindojo check ` to verify your solution
 
 ## Requirements
 - Windows, Mac, Linux
