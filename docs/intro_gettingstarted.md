@@ -28,7 +28,7 @@ admindojo utilizes the third-party tools Virtualbox and Vagrant:
 
 1. Open a Terminal(Linux + Mac) or Powershell(Windows) and change in the downloaded admindojo directory
 2. Change to a training directory
-    - e.g. `cd webserver-apache-ub18-basic-1`
+    - e.g. `cd webserver-apache-basic-1-ub18`
 3. Type `vagrant up`
     - Vagrant will now build the VM. The first run can take a while 
 4. Type `vagrant ssh`
