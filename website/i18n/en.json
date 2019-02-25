@@ -14,7 +14,10 @@
       "mission_other1": {
         "title": "Another mission"
       },
-      "webserver-apache-ub18-basic-1": {
+      "storage-raid-create-lvl1-ub18": {
+        "title": "Create a level 1 raid from empty disks"
+      },
+      "webserver-apache-basic-1-ub18": {
         "title": "Serve a static Website with Apache"
       }
     },
@@ -24,7 +27,8 @@
     },
     "categories": {
       "Intro": "Intro",
-      "Training Apache": "Training Apache"
+      "Apache Trainings": "Apache Trainings",
+      "Storage Trainings": "Storage Trainings"
     }
   },
   "pages-strings": {

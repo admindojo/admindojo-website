@@ -167,13 +167,13 @@ const Missions = props => (
         content: '<a href="' + siteConfig.baseUrl + 'webserver-apache-ub18-basic-1' + '">Serve a static website with Apache</a> <br />Apache hardening(coming soon)',
         image: imgUrl('frontpage/browser.png'),
         imageAlign: 'top',
-        title: 'Apache training',
+        title: 'Apache trainings',
       },
       {
-        content: 'Everyday admin tasks(coming soon) <br />Resize partitions(coming soon)',
+        content: '<a href="' + siteConfig.baseUrl + 'storage-raid-create-lvl1-ub18' +'">Create a level 1 raid from empty disks</a> <br />Resize partitions(coming soon)',
         image: imgUrl('frontpage/terminal.png'),
         imageAlign: 'top',
-        title: 'Sysadmin training',
+        title: 'Sysadmin trainings',
       },
     ]}
   </Block>

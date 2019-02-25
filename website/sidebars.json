@@ -3,8 +3,11 @@
       "Intro": [
         "getting-started"
       ],
-      "Training Apache": [
+      "Apache Trainings": [
         "webserver-apache-basic-1-ub18"
+      ],
+      "Storage Trainings": [
+        "storage-raid-create-lvl1-ub18"
       ]
     }
 }
