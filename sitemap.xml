@@ -12,5 +12,6 @@
 <url> <loc>https://admindojo.org/getting-started</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://admindojo.org/getting-started" /> </url>
 <url> <loc>https://admindojo.org/lesson_apache1</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://admindojo.org/lesson_apache1" /> </url>
 <url> <loc>https://admindojo.org/mission_other1</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://admindojo.org/mission_other1" /> </url>
+<url> <loc>https://admindojo.org/storage-raid-create-lvl1-ub18</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://admindojo.org/storage-raid-create-lvl1-ub18" /> </url>
 <url> <loc>https://admindojo.org/webserver-apache-basic-1-ub18</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://admindojo.org/webserver-apache-basic-1-ub18" /> </url>
 </urlset>

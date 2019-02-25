@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Create a level 1 raid from empty disks · adminDōjō</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Create a level 1 raid from empty disks&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Create a level 1 raid from empty disks · adminDōjō"/><meta property="og:type" content="website"/><meta property="og:url" content="https://admindojo.org/index.html"/><meta property="og:description" content="&lt;p&gt;Create a level 1 raid from empty disks&lt;/p&gt;
+"/><meta property="og:image" content="https://admindojo.org/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://admindojo.org/img/favicon.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">adminDōjō</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/getting-started" target="_self">Start training</a></li><li class=""><a href="/about" target="_self">About</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Storage Trainings</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Intro</h3><ul class=""><li class="navListItem"><a class="navItem" href="/getting-started">Getting started</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Apache Trainings</h3><ul class=""><li class="navListItem"><a class="navItem" href="/webserver-apache-basic-1-ub18">Serve a static Website with Apache</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Storage Trainings</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/storage-raid-create-lvl1-ub18">Create a level 1 raid from empty disks</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Create a level 1 raid from empty disks</h1></header><article><div><span><p>Create a level 1 raid from empty disks</p>
+<p>Training ID: <em>storage-raid-create-lvl1-ub18</em></p>
+<h2><a class="anchor" aria-hidden="true" id="scenario"></a><a href="#scenario" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scenario</h2>
+<p>Your customer got a new Ubuntu 18 Server with two additional disks. The customer needs a new directory at <code>\data</code> to store important files.</p>
+<p>All data inside this directory should be stored on a RAID 1 utilizing the additional disks. Your colleagues are familiar with RAID but want to try Btrfs as filesystem.
+But, in case they don't like Btrfs, they only want to convert the filesystem without changing the RAID.</p>
+<h2><a class="anchor" aria-hidden="true" id="objectives"></a><a href="#objectives" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objectives</h2>
+<ul>
+<li>identify the two additional disks</li>
+<li>create a software RAID 1</li>
+<li>format and mount the RAID according to your instructions</li>
+<li>make sure the mount persists across reboots</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="notes"></a><a href="#notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Notes</h2>
+<ul>
+<li>After you reboot your VM you need to run <code>vagrant reload --no-provision</code> inside the training directory to <a href="https://github.com/hashicorp/vagrant/issues/1845">mount required directories</a></li>
+<li>In case your VM doesn't boot anymore or the HDDs are broken just run <code>vagrant destroy</code> followed by <code>vagrant up</code> to delete the VM and start over.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="detailed-explanation-spoilers"></a><a href="#detailed-explanation-spoilers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Detailed explanation (spoilers)</h2>
+<h3><a class="anchor" aria-hidden="true" id="btrs"></a><a href="#btrs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>btrs</h3>
+<p><details><summary>click to show</summary></p>
+<p>
+<p>Btrs is a modern filesystem for Linux that implements advanced features like:</p>
+<ul>
+<li>Snapshots</li>
+<li>Checksums</li>
+<li>Integrated multi-device spanning(RAID like features)</li>
+<li>Compression</li>
+<li>Deduplication</li>
+</ul>
+<p>While Brtfs provides these advanced features, it's development status is heavily discussed inside the community. Because some of its features are
+still not ready for production its still not the default filesystem on Linux distributions. <a href="https://en.opensuse.org/SDB:BTRFS">openSUSE</a> is one of the few that comes with Btrfs by default.
+RedHat <a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.4_Release_Notes/chap-Red_Hat_Enterprise_Linux-7.4_Release_Notes-Deprecated_Functionality.html">publicly announced</a> the removal of Brtfs support 2017</p>
+<p>Despite the development status of some features, Btrfs is sill used by many.
+As long as the sysadmin is aware of the <a href="https://wiki.debian.org/Btrfs#Warnings">known issues</a>, the functional features outweigh the disadvantages of older filesystems like ext4.</p>
+<p>Using Brtfs with RAID is an example of these known issues and shows why it's important to check the <a href="https://btrfs.wiki.kernel.org/index.php/Status">Btrfs Statuspage</a>. Even though Btfs is capable of setting up a RAID itself - the implementation is not fully developed.
+By checking the <a href="https://btrfs.wiki.kernel.org/index.php/Status">Statuspage</a>, you'll find RAID0, RAID1 and RAID10 marked as stable and RAID56 as unstable. Futher reading of the page also reveals &quot;reading from mirrors in parallel can be optimized further&quot;.</p>
+<p>One strategy to use Btrfs but avoid any issues of its RAID-feature is to not use the build-in RAID capability and relay on stable implementations like mdadm.
+This strategy is also used in this training.</p>
+<p>Creating a btrfs filesystem is pretty easy: <a href="https://btrfs.wiki.kernel.org/index.php/Manpage/mkfs.btrfs">mkfs.btrfs</a></p>
+<p><code>mkfs</code> was originally implemented 40 years ago and is still used for many filesystems in Linux. Running <code>mkfs.&lt;fs-type&gt;</code> supports most filesystems.</p>
+<p>External resources</p>
+<ul>
+<li><a href="https://btrfs.wiki.kernel.org/index.php/Main_Page">Btrfs Wiki - kernel.org</a></li>
+<li><a href="https://wiki.debian.org/Btrfs">Brtfs Wiki - debian.org</a></li>
+<li><a href="https://btrfs.wiki.kernel.org/index.php/Production_Users">Companies that use Btrfs in production</a></li>
+<li><a href="https://btrfs.wiki.kernel.org/index.php/Status">List of Btrfs features including development status</a></li>
+</ul>
+</p>
+</details>
+<h3><a class="anchor" aria-hidden="true" id="fstab"></a><a href="#fstab" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fstab</h3>
+<p><details><summary>click to show</summary></p>
+<p>
+<p>To quote <a href="http://man7.org/linux/man-pages/man5/fstab.5.html">fstab(5)</a>:</p>
+<blockquote>
+<p>The file fstab contains descriptive information about the filesystems
+the system can mount.</p>
+</blockquote>
+<blockquote>
+<p>[...] it is the duty of the system administrator to properly
+create and maintain this file. [...]</p>
+</blockquote>
+<p>While modern distributions also allow dynamic mounting via <a href="https://wiki.archlinux.org/index.php/autofs">autofs</a> or <a href="https://www.freedesktop.org/software/systemd/man/systemd.automount.html">systemd</a>, <code>\etc\fstab</code> is still the main source for permanent storage devices.</p>
+<p>Adding mounts is pretty straight forward. Remember to use the UUID to identify partitions and use <a href="https://linux.die.net/man/8/blkid">blkid</a> to get all informations needed.</p>
+<p>It is worth to check out all available <code>options</code> in <a href="https://manpages.ubuntu.com/manpages/cosmic/en/man8/mount.8.html">mount(8)</a>. It is always good to lookup options when copying from tutorials or other posts.
+Usually adding only <code>defaults</code> is fine(note that defaults are always included by default even if you don't add it. It's only needed because the options field can't be empty).</p>
+<p>External resources</p>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/autofs">autofs</a></li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/systemd.automount.html">systemd.automount</a></li>
+<li><a href="https://www.ibm.com/developerworks/linux/library/l-linux-filesystem/">Anatomy of the Linux file system</a></li>
+</ul>
+</p>
+</details>
+<h3><a class="anchor" aria-hidden="true" id="mdadm"></a><a href="#mdadm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>mdadm</h3>
+<p><details><summary>click to show</summary></p>
+<p>
+<p>Creating a software RAID with mdadm is pretty straight forward. The command needed for this training is even included in the <a href="https://linux.die.net/man/8/mdadm">mdadm man page</a>.</p>
+<p>Be aware that a RAID can prevent data loss - but fixing a broken RAID can be complex.
+This training only requires you to create a RAID, but you should explore the tools to analyse and monitor your RAID yourself.</p>
+<p>External resources</p>
+<ul>
+<li><a href="https://linux.die.net/man/8/mdadm">mdadm(8) - Linux man page</a></li>
+<li><a href="https://raid.wiki.kernel.org">Linux Raid Wiki</a></li>
+<li><a href="https://raid.wiki.kernel.org/index.php/A_guide_to_mdadm">Linux Raid Wiki - A guide to mdadm</a></li>
+<li><a href="https://raid.wiki.kernel.org/index.php/Detecting,_querying_and_testing">Tips on RAID/mdadm maintainance</a></li>
+</ul>
+</p>
+</details>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/webserver-apache-basic-1-ub18"><span class="arrow-prev">← </span><span>Serve a static Website with Apache</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#scenario">Scenario</a></li><li><a href="#objectives">Objectives</a></li><li><a href="#notes">Notes</a></li><li><a href="#detailed-explanation-spoilers">Detailed explanation (spoilers)</a><ul class="toc-headings"><li><a href="#btrs">btrs</a></li><li><a href="#fstab">fstab</a></li><li><a href="#mdadm">mdadm</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section><div align="center"><h4><a href="/en/about">about admindojo</a></h4></div></section><section class="copyright">Copyright © 2019 admindojo powered by <a href="https://docusaurus.io">Docusaurus</a></section></footer></div></body></html>
