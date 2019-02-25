@@ -42,4 +42,11 @@ Training ID: *$Inspec-name*
 4. add page to `website/sidebars.json`
 
 
+## preview
+````bash
+cd website
+yarn start
+
+````
+
 build with [Docusaurus](https://github.com/facebook/Docusaurus)  
