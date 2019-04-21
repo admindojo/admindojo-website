@@ -74,19 +74,19 @@ After completing a scenario, it gets verified and rated by the Testing Framework
 <li>Due to the usage of VirtualBox, you can't run Docker or Hyper-V in parallel with VirtualBox. See <a href="https://www.vagrantup.com/docs/installation/">Vagrants documentation</a></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="install-required-tools"></a><a href="#install-required-tools" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install required tools</h3>
-<p>adminDōjō utilizes the third-party tools Virtualbox and Vagrant:</p>
+<p>adminDōjō utilizes some third-party tools:</p>
 <ol>
 <li><a href="https://www.virtualbox.org/">install VirtualBox</a></li>
 <li><a href="https://www.vagrantup.com/downloads.html">install Vagrant</a></li>
 <li><a href="https://git-scm.com/downloads">install git</a></li>
-<li>Clone training-repository <code>git clone https://github.com/admindojo/admindojo-training.git</code>
+<li>clone training-repository <code>git clone https://github.com/admindojo/admindojo-training.git</code>
 <ul>
 <li>it is also possible to just <a href="https://github.com/admindojo/admindojo-training/archive/master.zip">download the trainings</a> - but git provides easier updates via <code>git pull</code></li>
 </ul></li>
 </ol>
 <h3><a class="anchor" aria-hidden="true" id="start-training"></a><a href="#start-training" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Start training</h3>
 <ol>
-<li>Open a Powershell(Windows) or Terminal(Mac&amp;Linux)</li>
+<li>Open Powershell(Windows) or Terminal(Mac&amp;Linux)</li>
 <li>Change into cloned repository</li>
 <li>Change to a training directory
 <ul>
@@ -104,9 +104,13 @@ After completing a scenario, it gets verified and rated by the Testing Framework
 </ol>
 <h2><a class="anchor" aria-hidden="true" id="usage"></a><a href="#usage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h2>
 <h3><a class="anchor" aria-hidden="true" id="general"></a><a href="#general" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>General</h3>
-<p>adminDōjō heavily utilizes <a href="https://www.vagrantup.com">Vagrant</a> thus starting and rebooting the VM differs from normal operation.
-Use <code>vagrant ssh</code> to login/jump into the VM. You exit the VM with <em>cms+D</em> or <code>exit</code>. Please use the vagrant commands <code>vagrant reload</code> and <code>vagrant halt</code> to reboot/shutdown since it does some <em>magical</em> configuration to the VM. You must be inside the training directory to use these commands(One VM per training).
-Your user is the default vagrant user.</p>
+<p>adminDōjō heavily utilizes <a href="https://www.vagrantup.com">Vagrant</a> thus starting and rebooting the VM differs from normal operation.</p>
+<ul>
+<li>Use <code>vagrant ssh</code> to login/jump into the VM</li>
+<li>You exit the VM with <em>cms+D</em> or <code>exit</code></li>
+<li>Please use the vagrant commands <code>vagrant reload</code> and <code>vagrant halt</code> to reboot/shutdown the VM since it does some <em>magical configuration</em> to the VM. You must be inside the training directory to use these commands(One VM per training)</li>
+<li>Your user is the default vagrant user <em>vagrant</em></li>
+</ul>
 <h3><a class="anchor" aria-hidden="true" id="username-and-password"></a><a href="#username-and-password" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Username and password</h3>
 <p>Your user with sudo permission:</p>
 <ul>
@@ -117,22 +121,22 @@ Your user is the default vagrant user.</p>
 <ul>
 <li>shutdown
 <ol>
-<li>Exit the VM with <em>cmd+D</em> or <code>exit</code></li>
+<li>exit the VM with <em>cmd+D</em> or <code>exit</code></li>
 <li>inside training directory: <code>vagrant halt</code></li>
 </ol></li>
 <li>start over (delete VM)
 <ol>
-<li>Exit the VM with <em>cmd+D</em> or <code>exit</code></li>
+<li>exit the VM with <em>cmd+D</em> or <code>exit</code></li>
 <li>inside training directory: <code>vagrant destroy</code> and <code>vagrant up</code> to start again</li>
 </ol></li>
 </ul>
-<h3><a class="anchor" aria-hidden="true" id="finish-training-remove-vm"></a><a href="#finish-training-remove-vm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Finish training, remove VM</h3>
+<h3><a class="anchor" aria-hidden="true" id="remove-vm-after-finishing-a-training"></a><a href="#remove-vm-after-finishing-a-training" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Remove VM after finishing a training</h3>
 <ul>
-<li>outside VM, inside training directory: <code>vagrant destroy</code></li>
+<li>inside training directory: <code>vagrant destroy</code></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="update-admindojo"></a><a href="#update-admindojo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update admindojo</h3>
 <ol>
-<li>Open a Powershell(Windows) or Terminal(Mac&amp;Linux)</li>
+<li>Open Powershell(Windows) or Terminal(Mac&amp;Linux)</li>
 <li>Change into cloned repository</li>
 <li>run <code>git pull</code></li>
 </ol>
@@ -154,4 +158,4 @@ Your user is the default vagrant user.</p>
 <li><a href="https://www.inspec.io/docs/reference/cli/">Official documentation</a></li>
 </ul></li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/webserver-apache-basic-1-ub18"><span>Serve a static Website with Apache</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#about-admindōjō">about adminDōjō</a></li><li><a href="#getting-started">Getting started</a><ul class="toc-headings"><li><a href="#requirements">Requirements</a></li><li><a href="#install-required-tools">Install required tools</a></li><li><a href="#start-training">Start training</a></li></ul></li><li><a href="#usage">Usage</a><ul class="toc-headings"><li><a href="#general">General</a></li><li><a href="#username-and-password">Username and password</a></li><li><a href="#shutdown-reset">Shutdown, reset</a></li><li><a href="#finish-training-remove-vm">Finish training, remove VM</a></li><li><a href="#update-admindojo">Update admindojo</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section><div align="center"><h4><a href="/en/about">about admindojo</a></h4></div></section><section class="copyright">Copyright © 2019 admindojo powered by <a href="https://docusaurus.io">Docusaurus</a></section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/webserver-apache-basic-1-ub18"><span>Serve a static Website with Apache</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#about-admindōjō">about adminDōjō</a></li><li><a href="#getting-started">Getting started</a><ul class="toc-headings"><li><a href="#requirements">Requirements</a></li><li><a href="#install-required-tools">Install required tools</a></li><li><a href="#start-training">Start training</a></li></ul></li><li><a href="#usage">Usage</a><ul class="toc-headings"><li><a href="#general">General</a></li><li><a href="#username-and-password">Username and password</a></li><li><a href="#shutdown-reset">Shutdown, reset</a></li><li><a href="#remove-vm-after-finishing-a-training">Remove VM after finishing a training</a></li><li><a href="#update-admindojo">Update admindojo</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section><div align="center"><h4><a href="/en/about">about admindojo</a></h4></div></section><section class="copyright">Copyright © 2019 admindojo powered by <a href="https://docusaurus.io">Docusaurus</a></section></footer></div></body></html>
