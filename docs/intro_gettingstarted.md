@@ -86,11 +86,11 @@ Your user with sudo permission:
 3. run `git pull`
 
 
-# For advanced users
+## For advanced users
 
 In case you are familiar with vagrant and ssh you can SSH directly to your admindojo box(SSH could require changes to the Vagrantfile depending on the Box Version).
 
-Since admindojo uses real-world tools under the hood you're able to use their native functions.
+Since admindojo uses real-world tools under the hood you're able to use their native functions:
 
 - Vagrant 
     - [Official documentation](https://www.vagrantup.com/docs/cli/)
