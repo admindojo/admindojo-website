@@ -34,7 +34,7 @@ class about extends React.Component {
         '<br >' +
         '<ul>' +
           '<li><a href="https://www.inspec.io/">InSpec by Chef</a> - Compliance testing framework - License: Apache License 2.0</li>' +
-          '<li><a href="https://www.vagrantup.com/">Vagrant by HashiCorp</a> (Easy-to-use workflow to build VM environments- License: MIT</li>' +
+          '<li><a href="https://www.vagrantup.com/">Vagrant by HashiCorp</a> Easy-to-use workflow to build VM environments- License: MIT</li>' +
           '<li><a href="https://www.virtualbox.org/">Virtualbox by Oracle</a> - Powerful virtualization for enterprise as well as home use - License: GPLv2</li>' +
         '</ul>' +
 
