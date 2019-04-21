@@ -34,16 +34,16 @@ adminDōjō uses unmodified Linux images and real-world objectives - everything 
 
 
 ### Install required tools
-adminDōjō utilizes the third-party tools Virtualbox and Vagrant: 
+adminDōjō utilizes some third-party tools: 
 
 1. [install VirtualBox](https://www.virtualbox.org/)
 2. [install Vagrant](https://www.vagrantup.com/downloads.html)
 3. [install git](https://git-scm.com/downloads) 
-4. Clone training-repository `git clone https://github.com/admindojo/admindojo-training.git`
+4. clone training-repository `git clone https://github.com/admindojo/admindojo-training.git`
     - it is also possible to just [download the trainings](https://github.com/admindojo/admindojo-training/archive/master.zip) - but git provides easier updates via `git pull` 
 
 ### Start training
-1. Open a Powershell(Windows) or Terminal(Mac&Linux)
+1. Open Powershell(Windows) or Terminal(Mac&Linux)
 2. Change into cloned repository
 3. Change to a training directory
     - e.g. `cd webserver-apache-basic-1-ub18`
@@ -56,8 +56,11 @@ adminDōjō utilizes the third-party tools Virtualbox and Vagrant:
 ## Usage
 ### General
 adminDōjō heavily utilizes [Vagrant](https://www.vagrantup.com) thus starting and rebooting the VM differs from normal operation.
-Use `vagrant ssh` to login/jump into the VM. You exit the VM with _cms+D_ or `exit`. Please use the vagrant commands `vagrant reload` and `vagrant halt` to reboot/shutdown since it does some _magical_ configuration to the VM. You must be inside the training directory to use these commands(One VM per training).
-Your user is the default vagrant user.
+
+- Use `vagrant ssh` to login/jump into the VM
+- You exit the VM with _cms+D_ or `exit`
+- Please use the vagrant commands `vagrant reload` and `vagrant halt` to reboot/shutdown the VM since it does some _magical configuration_ to the VM. You must be inside the training directory to use these commands(One VM per training)
+- Your user is the default vagrant user _vagrant_
 
 ### Username and password
 
@@ -68,17 +71,17 @@ Your user with sudo permission:
 ### Shutdown, reset
 
 - shutdown
-    1. Exit the VM with _cmd+D_ or `exit`
+    1. exit the VM with _cmd+D_ or `exit`
     2. inside training directory: `vagrant halt`
 - start over (delete VM)
-    1. Exit the VM with _cmd+D_ or `exit`
+    1. exit the VM with _cmd+D_ or `exit`
     2. inside training directory: `vagrant destroy` and `vagrant up` to start again
     
-### Finish training, remove VM
-- outside VM, inside training directory: `vagrant destroy`
+### Remove VM after finishing a training
+- inside training directory: `vagrant destroy`
 
 ### Update admindojo
-1. Open a Powershell(Windows) or Terminal(Mac&Linux)
+1. Open Powershell(Windows) or Terminal(Mac&Linux)
 2. Change into cloned repository
 3. run `git pull`
 
