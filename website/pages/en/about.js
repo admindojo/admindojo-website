@@ -47,7 +47,7 @@ class about extends React.Component {
 
         'Feeback is highly appreciated!' +
         '<br >' +
-        'Create an GitHub Issue or send a mail: feedback@admindojo.org' +
+        'Create an <a href="https://github.com/admindojo/admindojo-training/issues/new" target="_blank">GitHub Issue</a> or send a mail: feedback@admindojo.org' +
         '<br ><br ><br >',
         title: 'about admindojo',
       },
