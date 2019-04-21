@@ -3,42 +3,47 @@ id: getting-started
 title: Getting started
 ---
 
-## Admindojo?
+## about adminDōjō
 
-admindojo provides an easy to setup enviroment to train real-world Linux administration tasks in preconfigured VirtualMachines.
+adminDōjō provides an easy to setup enviroment to train real-world Linux administration tasks in preconfigured VirtualMachines.
 
 Each training contains a real-world scenario and in-depth explanations.
 After completing a scenario, it gets verified and rated by the Testing Framework InSpec - this way you know exactly if you implemented best-practices.
 
-Since Gamification can help motivating yourself, admindojo also measures the time you needed and calculates a score for each scenario. 
+Since Gamification can help motivating yourself, adminDōjō also measures the time you needed and calculates a score for each scenario. 
 
-**admindojo is not just a simulation**! admindojo uses unmodified Linux images and real-world objectives - everything that you learn is fully applicable to a standard Linux installation! 
+**adminDōjō is not just a simulation**!
 
-## How?
+adminDōjō uses unmodified Linux images and real-world objectives - everything that you learn is fully applicable to a standard Linux installation! 
 
-1. Choose a training on the left
-2. read the objectives and implement them
-3. read the detailed explanations for in-depth information or hints
-4. run `admindojo check ` to verify your solution
+## Getting started 
 
-## Requirements
+1. Install required tools
+2. Choose a training on the left
+3. Start the preconfigured VM
+4. Read the objectives and implement them
+5. Run `admindojo check ` to verify your solution
+
+
+### Requirements
 - Windows, Mac, Linux
 - 10-20GB HDD for VMs
 - 1-2GB RAM for VMs
 - Internet connection to download VMs (~500MB once + 50-100MB per training)
 - Due to the usage of VirtualBox, you can't run Docker or Hyper-V in parallel with VirtualBox. See [Vagrants documentation](https://www.vagrantup.com/docs/installation/)
 
-### Install Requirements
-admindojo utilizes the third-party tools Virtualbox and Vagrant: 
+
+### Install required tools
+adminDōjō utilizes the third-party tools Virtualbox and Vagrant: 
 
 1. [install VirtualBox](https://www.virtualbox.org/)
 2. [install Vagrant](https://www.vagrantup.com/downloads.html)
 3. [install git](https://git-scm.com/downloads) 
-    
-## Usage
-
-1. Clone training-repository `git clone https://github.com/admindojo/admindojo-training.git`
+4. Clone training-repository `git clone https://github.com/admindojo/admindojo-training.git`
     - it is also possible to just [download the trainings](https://github.com/admindojo/admindojo-training/archive/master.zip) - but git provides easier updates via `git pull` 
+
+### Start training
+1. Open a Powershell(Windows) or Terminal(Mac&Linux)
 2. Change into cloned repository
 3. Change to a training directory
     - e.g. `cd webserver-apache-basic-1-ub18`
@@ -48,27 +53,37 @@ admindojo utilizes the third-party tools Virtualbox and Vagrant:
     - You're now inside the VM and can start the training
 6. Run `admindojo` for instructions
 
+## Usage
+### General
+adminDōjō heavily utilizes [Vagrant](https://www.vagrantup.com) thus starting and rebooting the VM differs from normal operation.
+Use `vagrant ssh` to login/jump into the VM. You exit the VM with _cms+D_ or `exit`. Please use the vagrant commands `vagrant reload` and `vagrant halt` to reboot/shutdown since it does some _magical_ configuration to the VM. You must be inside the training directory to use these commands(One VM per training).
+Your user is the default vagrant user.
 
-### username and password
+### Username and password
+
+Your user with sudo permission:
 - username: `vagrant`
 - password: `vagrant`
 
-### operating system
-The used Linux distribution can differ by training:
-- Ubuntu 18 (bionic)
-    - [Official cloud-image distributed by Ubuntu](https://app.vagrantup.com/ubuntu/boxes/bionic64)
-    
-### shutdown, reset
+### Shutdown, reset
+
 - shutdown
-    - inside VM: `shutdown now`
-    - outside VM, inside training directory: `vagrant halt`
-- start over
-    - outside VM, inside training directory: `vagrant destroy` and `vagrant up` to start again
+    1. Exit the VM with _cmd+D_ or `exit`
+    2. inside training directory: `vagrant halt`
+- start over (delete VM)
+    1. Exit the VM with _cmd+D_ or `exit`
+    2. inside training directory: `vagrant destroy` and `vagrant up` to start again
     
-### finish training, remove VM
+### Finish training, remove VM
 - outside VM, inside training directory: `vagrant destroy`
 
-# for advanced users
+### Update admindojo
+1. Open a Powershell(Windows) or Terminal(Mac&Linux)
+2. Change into cloned repository
+3. run `git pull`
+
+
+# For advanced users
 
 In case you are familiar with vagrant and ssh you can SSH directly to your admindojo box(SSH could require changes to the Vagrantfile depending on the Box Version).
 
